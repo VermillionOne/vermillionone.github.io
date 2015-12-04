@@ -97,7 +97,12 @@ nav ul li a {
   background-color: rgba(229, 229, 229,1);
   padding: 5px;
 }
-
+.logo {
+  background: rgba(0,0,0,0);
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
 /* COMPONENTS ============================== */
 article {
   margin: 0 0 20px;
