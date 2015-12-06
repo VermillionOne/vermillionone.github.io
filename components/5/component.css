@@ -1,4 +1,154 @@
-/* Component Stylesheet 
+/* Component Stylesheet
 ============================================================
 ============================================================*/
 
+/* Global Styles
+==========================*/
+
+body {
+  background: url(img/bg.jpg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav, section, footer {
+  width: 980px;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+}
+
+/* Header
+==========================*/
+header {
+  width: 100%;
+  background: #2a2a2a;
+  height: 38px;
+  margin: 0 0 29px;;
+}
+
+/* Navigation
+==========================*/
+
+nav h1 {
+  padding: 0px 59px ;
+  background-image: url(img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 0px;
+  margin: 0 0 10px 22px;
+  color: #d63d1e;
+  font-family: 'Open Sans';
+  font-size: 2.6875em;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+nav h1 span {
+  font-weight: bold;
+  color: #0d0d0d;
+}
+nav ul {
+  position: relative;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 1.125em;
+  overflow: auto;
+  border-bottom: 5px solid #0d0d0d;
+}
+nav ul li:first-child {
+  border: 0px solid;
+}
+nav ul li {
+  position: relative;
+  border-left: 1px solid #494949;
+  text-align: center;
+  display: block;
+  float:left;
+  width: 140px;
+  text-transform: uppercase;
+}
+nav ul li a {
+  color: #9c9c9c;
+  display: block;
+  height: 68px;
+  padding: 22px 0 0;
+  width: 100%;
+  background: url(img/menu-bg.jpg);
+}
+nav ul li a:hover {
+  background: url(img/menu-hover.jpg);
+  color: #f6f6f6;
+}
+
+/* Section
+==========================*/
+
+section {
+  height: 397px;
+  background: url(img/slide1.jpg);
+}
+
+
+/* Article
+==========================*/
+
+article {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #f6f6f6;
+  background: rgba(0,0,0,.5);
+  padding: 20px 25px 15px;
+}
+article h2 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.625em;
+  line-height: 2.6px;
+  letter-spacing: 0px;
+  margin: 6px 0 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+article p {
+  line-height: initial;
+  font-size: .75em;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  margin: 0 0 20px;
+}
+article a {
+  color:#fff;
+  background: #d63d1e;
+  width: 95px;
+  height: 16px;
+  border-radius: 10px;
+  font-size: .875em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: content-box;
+  display: block;
+  padding: 12px 13px;
+}
+
+/* Article
+==========================*/
+footer {
+  background: #f6f6f6;
+  border-radius: 0 0 10px 10px;
+  padding: 4px 22px;
+}
+footer button {
+  background: #3c3c3c;
+  border: 0px solid;
+  display: block;
+  float: left;
+  margin: 0px 2px;
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+}
+footer button:hover {
+  background: #d63d1e;
+  cursor: pointer;
+}
+footer button.active {
+  background: #d63d1e;
+}
