@@ -61,26 +61,3 @@ svg {
 .stat[data-percent='98'] .percent {
   stroke-dashoffset: 155;
 }
-
-
-/* Animations
-==========================*/
-@-webkit-keyframes show75 {
-  from {
-    stroke-dashoffset: 537;
-  }
-
-  to {
-    stroke-dashoffset: 134;
-  }
-}
-
-@keyframes show75 {
-  from {
-    stroke-dashoffset: 537;
-  }
-
-  to {
-    stroke-dashoffset: 124;
-  }
-}
