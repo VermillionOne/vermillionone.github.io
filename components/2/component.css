@@ -1,4 +1,86 @@
-/* Component Stylesheet 
+/* Component Stylesheet
 ============================================================
 ============================================================*/
 
+/* Section
+===========================*/
+section {
+  padding: 20.526316%;
+}
+
+/* Figure
+===========================*/
+figure {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+figure p {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 1.25em;
+  color: #48494a;
+  letter-spacing: 0px;
+  line-height: 1.2;
+}
+figure p:nth-child(2) {
+  bottom: 55px;
+  font-family: 'Playfair Display', serif;
+  color: #b8b8b8;
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+}
+svg {
+  margin: 20px 0 0;
+}
+.outline {
+  fill: transparent;
+  stroke: #e0e0e0;
+  stroke-width: 6;
+  stroke-dasharray: 534;
+}
+.percent {
+  fill: transparent;;
+  stroke: #333;
+  stroke-width: 6;
+  stroke-dasharray: 534;
+}
+.stat[data-percent='69'] .percent {
+  stroke-dashoffset: 282;
+}
+
+.stat[data-percent='75'] .percent {
+  stroke-dashoffset: 230;
+}
+
+.stat[data-percent='50'] .percent {
+  stroke-dashoffset: 331;
+}
+.stat[data-percent='98'] .percent {
+  stroke-dashoffset: 155;
+}
+
+
+/* Animations
+==========================*/
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 124;
+  }
+}
