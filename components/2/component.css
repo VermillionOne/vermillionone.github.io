@@ -4,19 +4,22 @@
 
 /* Section
 ===========================*/
-section {
+ul {
   padding: 100px 20.526316%;
+  list-style-type: none;
+  text-align: center;
 }
 
 /* Figure
 ===========================*/
-figure {
+ul li {
   position: relative;
+  display: block;
   float: left;
   width: 25%;
   min-width: 150px;
 }
-figure p {
+ul li p {
   font-family: 'Playfair Display', serif;
   text-align: center;
   font-size: 1.25em;
@@ -24,7 +27,7 @@ figure p {
   letter-spacing: 0px;
   line-height: 1.2;
 }
-figure p:nth-child(2) {
+ul li p:nth-child(2) {
   bottom: 55px;
   font-family: 'Playfair Display', serif;
   color: #b8b8b8;
@@ -39,7 +42,7 @@ svg {
   display: block;
   margin: 20px auto 0;
 }
-.outline {
+ul li svg circle {
   fill: transparent;
   stroke: #e0e0e0;
   stroke-width: 6;
@@ -48,7 +51,7 @@ svg {
   cy: 75px;
   r: 65px;
 }
-.percent {
+ul li svg circle:nth-child(2) {
   fill: transparent;;
   stroke: #333;
   stroke-width: 6;
@@ -57,17 +60,17 @@ svg {
   cy: 75px;
   r: 65px;
 }
-.stat[data-percent='69'] .percent {
+[data-percent='69'] svg circle:nth-child(2) {
   stroke-dashoffset: 282;
 }
 
-.stat[data-percent='75'] .percent {
+[data-percent='75'] svg circle:nth-child(2) {
   stroke-dashoffset: 230;
 }
 
-.stat[data-percent='50'] .percent {
+[data-percent='50'] svg circle:nth-child(2) {
   stroke-dashoffset: 331;
 }
-.stat[data-percent='98'] .percent {
+[data-percent='98'] svg circle:nth-child(2) {
   stroke-dashoffset: 155;
 }
