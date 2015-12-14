@@ -15,7 +15,7 @@ header, nav, main, section {
 ===============================*/
 header {
   color: #888;
-  padding: 5px 0 0;
+  padding: 5px 0 15px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -37,6 +37,7 @@ header > p > strong:nth-child(2) {
 ===============================*/
 nav {
   padding: 15px 0;
+  margin: 0 0 ;
 }
 nav ul {
   font-weight: 700;
@@ -52,4 +53,35 @@ nav ul li a {
 }
 nav ul li a.active {
   color: #333;
+}
+
+/*  Section Styles
+===============================*/
+section:nth-of-type(1) {
+  background: url('img/parallax1.jpg') no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+section:nth-of-type(1) article {
+  position: relative;
+  width: 66.66667%;
+  margin: 0 auto;
+}
+section:nth-of-type(1) img {
+  width: 100%;
+}
+/*  Class Styles
+===============================*/
+.blue-heading {
+  background: rgba(103, 172, 188, 0.8);
+  color: #fff;
+  font-size: 2.1875em;
+  min-height: 440px;
+  padding: 160px 20px;
+  text-transform: uppercase;
+  top: 220px;
+}
+.blue-heading strong {
+  font-weight: 900;
 }
