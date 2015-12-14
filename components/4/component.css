@@ -3,7 +3,6 @@
 ============================================================*/
 
 
-
 /* Nav Classes
 =============================*/
 
@@ -34,19 +33,23 @@ nav > ul > li:hover{
   box-shadow: 0 -3px 23px 1px rgba(0,0,0,0.1);
   border-right: 1px solid #d3d3d3;
   border-left: 1px solid #d3d3d3;
+
 }
 nav > ul > li:nth-child(5) {
   width: 20%;
 }
 ul li {
-  display: block;
+  display: inline-block;
   float: left;
+}
+ul li a {
+  cursor: pointer;
 }
 
 /* Sub-Nav Classes
 =============================*/
 
-.top-products {
+nav > ul > li:first-child {
   background-color: #fff;
   color: #5e5652;
   box-shadow: 0 -3px 23px 1px rgba(0,0,0,0.1);
@@ -54,7 +57,7 @@ ul li {
   border-left: 1px solid #d3d3d3;
   padding-bottom: 0px;
 }
-.top-products:before {
+nav > ul > li:first-child:before {
   background: url(img/best-sellers-badge.png) left top no-repeat;
   position: absolute;
   content: '';
@@ -64,7 +67,7 @@ ul li {
   height: 25px;
   width: 25px;
 }
-.top-products ul {
+nav > ul > li:first-child ul {
   background-color: #fff;
   border-right: 1px solid #d3d3d3;
   border-bottom: 1px solid #d3d3d3;
@@ -74,12 +77,13 @@ ul li {
   padding: 0 0 0 39px;
   width: 1079px;
 }
-.top-products ul li {
+nav > ul > li:first-child ul li {
   width: 137px;
+
   overflow: hidden;
   padding: 14px 20px 17px 19px;
 }
-.top-products ul li a{
+nav > ul > li:first-child ul li a{
   font-size: 0.875em;
   padding-left: 30px;
   line-height: 14px;
@@ -90,6 +94,8 @@ ul li {
 }
 /* Sprite Classes
 =============================*/
+
+
 
 .icon {
   background-image: url('img/sprite.svg');
