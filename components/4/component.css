@@ -94,9 +94,6 @@ nav > ul > li:first-child ul li a{
 }
 /* Sprite Classes
 =============================*/
-
-
-
 .icon {
   background-image: url('img/sprite.svg');
   background-size: 157px 1000px;

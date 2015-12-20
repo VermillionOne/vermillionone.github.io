@@ -1,4 +1,64 @@
-/* Component Stylesheet 
+/* Component Stylesheet
 ============================================================
 ============================================================*/
 
+/* Fontface definition
+==============================*/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+@font-face {
+    font-family: myicons;
+    src: url(icons/MyIcons/flaticon.woff);
+}
+
+/* Global Styles
+==============================*/
+body {
+  font: normal 16px Ubuntu, sans-serif;
+  color: #978776;
+}
+
+h2 {
+  margin: 20px 0 10px 10px;
+  font-size: 1.275em;
+  color: #877561;
+}
+
+/* Content List Styles
+==============================*/
+section ul {
+  list-style-type: none;
+}
+
+section ul li {
+  display: inline-block;
+  width: 33%;
+  position: relative;
+}
+section ul li span {
+  background-color: #abcc26;
+  border-radius: 50px;
+  width: 79px;
+  height: 79px;
+  position: absolute;
+  top: 0;
+  left: 00px;
+}
+section ul li h3 {
+  color: #fd8505;
+  width: 68%;
+  float: right;
+  font-size: 1.125em;
+}
+
+section ul li p {
+  width: 68%;
+  float: right;
+}
+/* Class styles
+==============================*/
+
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 1180px;
+}
