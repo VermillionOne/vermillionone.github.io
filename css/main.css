@@ -58,17 +58,16 @@ nav {
   z-index: 9;
   position: fixed;
   background: #841919;
-  overflow: hidden;
   padding: 5px 0;
 }
-nav ul {
+nav > ul {
   border-radius: 2px;
   max-width: 960px;
   padding: 0px 0;
   width: 90%;
   margin: 0 auto;
 }
-nav ul li {
+nav > ul > li {
 /*  background-color: rgba(229, 229, 229, .9);*/
   display: block;
   float: left;
@@ -76,17 +75,56 @@ nav ul li {
   margin: 6px 0;
   border: 0 solid;
   text-align: center;
-  width: 18.4%;
+  width: 14.7999%;
   box-sizing: border-box;
 }
-nav ul li:first-child {
+nav > ul > li:last-child {
+  width: 18%;
+  position: relative;
+  cursor: pointer;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+}
+nav > ul > li:last-child:hover {
+  width: 18%;
+  position: relative;
+
+}
+nav > ul > li:last-child > ul {
+  list-style-type: none;
+  position: absolute;
+  top: 36px;
+  left: 4px;
+  width: 95.1%;
+  height: 0px;
+  box-shadow: 0px 1px 1px rgba(0,0,0, .25);
+  overflow: hidden;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+}
+nav > ul > li:last-child:hover > ul {
+  height: initial;
+}
+nav > ul > li:last-child > ul > li {
+  float: left;
+  width: 100%;
+}
+nav > ul > li:last-child > ul > li > a{
+  border-radius: 0px 0px 3px 3px;
+}
+nav > ul > li:last-child > ul > li > a:hover{
+  background-color: ;
+}
+nav > ul > li:first-child {
   width: 7%;
   margin: 0 1% 0 0;
   padding: 5px 0 0;
   box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 nav ul li:first-child img {
-  width: 59px
+  width: 59px;
 }
 nav ul li a {
   color: #841919;
@@ -97,6 +135,10 @@ nav ul li a {
   background-color: rgba(229, 229, 229,1);
   padding: 5px;
 }
+nav ul li a:hover {
+  background: rgba(200, 180, 180,1);
+}
+
 nav ul li a:active {
   margin: 1px 0 -1px;
 }
