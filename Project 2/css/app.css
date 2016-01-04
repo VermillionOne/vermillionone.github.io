@@ -1,0 +1,129 @@
+/**************
+tag selectors
+**************/
+body {
+  font-family: Ubuntu, sans-serif;
+  background: url(../img/carbon_fibre/carbon_fibre.png);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+}
+
+/****************
+class selectors
+****************/
+.jumbotron{
+  background: rgba(0,0,0,.75);
+  margin: 0px; 
+}
+
+.carousel-inner .item img{
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 50px rgba(0,0,0,1);
+}
+.carousel-caption h1 {
+  font-size: 3.5em;
+  text-shadow: 0px 2px 1px rgba(0,0,0,.5), 0px -4px 20px rgba(0,0,0,.5);
+}
+.navbar.navbar-inverse{
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+img.media-object {
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px rgba();
+}
+section.main-content .panel {
+  border: none;
+  box-shadow: ;
+  background: ;
+}
+.img-responsive.aside-image{
+  margin: 0px 0px 20px 0px ;
+}
+section.main-content .panel{
+  border: none;
+  box-shadow: ;
+}
+.embed-responsive.embed-responsive-16by9.video{
+  margin: 0px 0px 20px;
+}
+
+/****************
+@media selectors
+****************/
+@media (min-width: 992px) {
+  .carousel-inner .item img {
+    margin: 0px auto;
+    height: 500px;
+  }
+  .carousel-caption h1 {
+    font-size: 3.5em;
+    text-shadow: 0px 2px 1px rgba(0,0,0,.5), 0px -4px 20px rgba(0,0,0,.5);
+  }
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-inner .item img {
+    margin: 0px auto;
+    max-height: 500px;
+  }
+  section.col-xs-8.col-sm-8.col-md-8.col-lg-8.main-content.pull-left{
+    width: 100%;
+  }
+  .img-responsive.aside-image{
+    margin: 0px 0px 20px 0px ;
+  }
+  aside.col-xs-4.col-sm-4.col-md-4.col-lg-4.aside-column{
+    float: right;
+    width: 100%;
+    clear: both;
+  }
+  .aside-column .well{
+    overflow: auto;
+  }
+  .aside-column img{
+    display: none;
+  }
+  .aside-column .list-group{
+    width: 100%;
+    float: right;
+    padding: 0px;
+  }
+  .aside-column .list-group li{
+    width: 24%;
+    font-size: 1em;
+    margin: 0px;
+    min-height: 66px;
+    vertical-align: middle;
+    padding: 10px 10px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .aside-column .list-group li a{
+    vertical-align: middle;
+  }
+}
+@media (max-width: 480px) {
+  .aside-column{
+    display: none;
+  }
+  .media {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .media a{
+    width: 100%;
+  }
+  .media a img{
+    margin: 10px auto;
+  }
+  .col-xs-4.col-sm-4.col-md-4.col-lg-4.button{
+    width: 67%;
+    margin: 0px 15.15%;
+  }
+}
