@@ -1,0 +1,176 @@
+/**************
+tag selectors
+**************/
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+  background-color: dimgrey;
+}
+header {
+  background: #fda;
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  color: firebrick;
+  margin: 0px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,.25), inset 0px -90px 90px -40px rgba(25,2,0,.25);
+}
+header span {
+  margin: 0px 20px 0px 0px;
+}
+header h1 {
+  text-shadow: 1px 1px 0px #fda, 3px 3px 0px rgba(0,0,0,.25);
+  font-size: 3em;
+}
+h1, h2, h3 {
+  font-family: 'Arvo', serif;
+}
+nav {
+  background-color: #5c5c5c;
+  padding: 0px 0px;
+  position: relative;
+  box-shadow: 0px 3px 3px rgba(0,0,0,.35), inset 0px -20px 40px -10px rgba(0,0,0,.5);
+}
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+}
+nav ul li a {
+  text-decoration: none;
+  color: beige;
+  padding: 10px 5px;
+  width: 75px;
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+}
+nav ul li a:hover {
+  background-color: rgba(0,0,0,.15);
+}
+nav ul li a:focus {
+
+}
+nav ul li a:active {
+
+}
+nav ul li a:visited {
+
+}
+h2 {
+  margin: 20px 0px 0px 20px;
+  padding: 0px 0px 5px;
+  border-bottom: 2px solid #bcbcbc;
+}
+h3 {
+  margin: 20px 0px 0px 40px;
+  padding: 0px 0px 5px;
+}
+figure {
+  border: 1px solid #cfcfcf;
+  border-radius: 5px ;
+  padding: 20px;
+  box-shadow: inset 0px 0px 25px rgba(0,0,0,.025);
+  position: relative;
+  overflow: auto;
+}
+figure div {
+  width: 65.5%;
+  float: left;
+  height: auto;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.25);
+}
+
+figure div img {
+  width: 100%;
+  height: initial;
+}
+figcaption {
+  float: left;
+  width: 32.5%;
+  padding: 0px 0px 0px 15px;
+}
+
+figure:nth-child(6) img {
+  width: 100%;
+  margin-right: 0%;
+  transform: translate(0%, -45%);
+}
+footer {
+  width: 100%;
+  position: relative;
+  min-height: 200px;
+  color: #fff;
+  background-image: url("../img/footer_lodyas/footer_lodyas.png");
+}
+footer h5{
+  margin: 10px 10px;
+
+}
+footer p {
+  font-size: 1em;
+  color: white;
+  width: auto;
+  float: right;
+  width: 300px;
+  padding: 5px;
+}
+footer p span {
+  margin: 0px 10px 0px;
+}
+footer p  a{
+  color: white;
+  width: 75%;
+  display: block;
+  text-decoration: none;
+}
+/****************
+class selectors
+****************/
+.container {
+  position: relative;
+  overflow: hidden;
+  margin: 0px auto 20px;
+  padding: 0px 0px 0px;
+  border-radius: 0px 0px 5px 5px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.75);
+}
+
+@media (min-width: 961px) {
+  .container {
+    width: 950px;
+  }
+}
+@media (max-width: 959px) {
+  figure {
+    max-width: 700px;
+  }
+  figure div {
+    float: left;
+    width: 75%;
+    clear: both;
+    min-height: none;
+  }
+  figcaption {
+    clear: both;
+  }
+}
+@media (max-width: 640px) {
+  figure div {
+    width: 100%;
+    height: auto;
+  }
+  figcaption {
+    width: 95%
+  }
+}

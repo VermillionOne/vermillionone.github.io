@@ -7,7 +7,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
 @font-face {
     font-family: myicons;
-    src: url(icons/MyIcons/flaticon.woff);
+    src: url('');
 }
 
 /* Global Styles
@@ -25,14 +25,19 @@ h2 {
 
 /* Content List Styles
 ==============================*/
+section {
+  width: 66.66666%;
+}
 section ul {
   list-style-type: none;
 }
 
 section ul li {
   display: inline-block;
-  width: 33%;
+  width: 49.7122%;
   position: relative;
+  box-sizing: border-box;
+  margin: 0;
 }
 section ul li span {
   background-color: #abcc26;
@@ -42,11 +47,16 @@ section ul li span {
   position: absolute;
   top: 0;
   left: 00px;
+  margin: 0;
+}
+section ul li span::before {
+  content: '\e008';
 }
 section ul li h3 {
   color: #fd8505;
   width: 68%;
   float: right;
+  margin: 0;
   font-size: 1.125em;
 }
 
