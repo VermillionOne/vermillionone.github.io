@@ -89,7 +89,9 @@ nav > ul > li:last-child {
 nav > ul > li:last-child:hover {
   width: 18%;
   position: relative;
-
+}
+nav > ul > li:last-child:hover a{
+  border-radius: 3px 3px 0 0;
 }
 nav > ul > li:last-child > ul {
   list-style-type: none;
@@ -111,10 +113,13 @@ nav > ul > li:last-child > ul > li {
   float: left;
   width: 100%;
 }
-nav > ul > li:last-child > ul > li > a{
-  border-radius: 0px 0px 3px 3px;
+nav > ul > li:last-child > ul > li > a {
+  border-radius: 0px;
 }
-nav > ul > li:last-child > ul > li > a:hover{
+nav > ul > li:last-child > ul > li > a:last-child {
+  border-radius: 0px;
+}
+nav > ul > li:last-child > ul > li > a:hover {
   background-color: ;
 }
 nav > ul > li:first-child {
