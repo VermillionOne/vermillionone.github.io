@@ -82,7 +82,7 @@ figure {
 figure div {
   width: 65.5%;
   float: left;
-  height: auto;
+  height: 380px;
   border-radius: 3px;
   position: relative;
   overflow: hidden;
