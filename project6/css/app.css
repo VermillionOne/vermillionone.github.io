@@ -1,0 +1,219 @@
+
+/**
+ ** Tag Styles
+ ***************************/
+body {
+  background: #e0e0e0;
+  font-family: lato;
+  margin: 0;
+  padding: 0;
+}
+header {
+  box-shadow: 0 2px 5px rgba(0,0,0, .5);
+  background: #be1717;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+header h1 {
+  font-family: righteous;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 -1px 0px rgba(0,0,0, .5);
+}
+header h2 {
+  margin: 0;
+  text-shadow: 0 -1px 0px rgba(0,0,0, .35);
+}
+section {
+  float: left;
+  max-width: 450px;
+  padding: 20px;
+  position: fixed;
+  top: 130px;
+  width: 90%;
+}
+section form {
+  overflow: auto;
+  padding: 0px 20px 20px;
+  border-radius: 3px;
+  background-color: #fff;
+  display: block;
+}
+label {
+  float: left;
+  width: 100%;
+  font-weight: 100;
+  color: #987575;
+}
+input {
+  float: left;
+  font-size: 1.0em;
+  margin: 2px 0 5px;
+  padding: 5px 10px;
+  border: 0 solid;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,.25),  inset 0 0px 3px 1px rgba(0,0,0,.1);
+  border-radius: 4px;
+  width: 85%;
+}
+form input:nth-child(3) {
+  border: 1px indent;
+  border-radius: 4px 0 0 4px;
+  border-right: 0px solid;
+  width: 35%;
+}
+form input:nth-child(4) {
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+  border-radius: 0px;
+  width: calc(5% - 2px);
+}
+form input:nth-child(5) {
+  border-left: 0px solid;
+  border-radius: 0 4px 4px 0;
+  width: 35%;
+}
+form input:nth-child(11) {
+  clear: both;
+}
+form label:nth-child(12) {
+  width: 15%;
+  float: left;
+}
+form input:nth-child(13) {
+  width: 30%;
+}
+form button {
+  clear: both;
+  float: left;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  border: 0px solid;
+  font-size: 1.125em;
+}
+aside {
+/*  background: #ff4;*/
+  float: right;
+  padding: 0 20px;
+  margin: 150px 0;
+  width: calc(100% - 530px);
+}
+aside article {
+  background: #fff;
+  float: right;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.15);
+  margin: 0 auto 8px 20px;
+  padding: 5px 20px 10px;
+  width: 350px;
+  position: relative;
+}
+article h4 {
+  margin: 20px 0 0;
+}
+article p {
+  float: left;
+  width: 100%;
+  margin: 3px 0;
+}
+article button {
+  border: 0px solid;
+  padding: 15px 20px ;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: #fff;
+  cursor: pointer;
+}
+
+article button div {
+  color: #999;
+  margin: -7px;
+  padding: 0px;
+  font-size: 2em;
+  margin: -20px 0 0;
+  transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+article button:hover div {
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/**
+ ** Class Styles
+ ***************************/
+div[class*='-input-holder'] {
+  width: calc(30% - 8px);
+  float: left;
+  padding: 0 10px 0 0;
+}
+div[class="phone-input-holder"] {
+  width: calc(60% - 4px);
+  float: left;
+  padding: 0 10px 0 0;
+}
+div[class="birthdate-input-holder"] {
+  width: 60%;
+  float: left;
+  padding: 0 10px 0 0;
+}
+.phone-input-holder > input {
+  width: 93%;
+}
+.birthdate-input-holder > input{
+  width: 91%;
+}
+.position {
+  margin: 0px 0 20px;
+}
+.city {
+  width: 50%;
+}
+.state {
+  width: 15%;
+}
+.zipcode {
+  text-align: right;
+  float: right;
+  width: 30%;
+}
+.phoneNumber {
+  width: 40%;
+}
+.phoneExt {
+  width: 28%;
+}
+.birthdate {
+  text-align: right;
+  float: right;
+  width: 30%;
+}
+.item-menu {
+  list-style-type: none;
+  background: #fafafa;
+  box-shadow: 0 1px 2px rgba(0,0,0,.25);
+  width: 25%;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  padding: 0;
+}
+.item-menu li {
+  cursor: pointer;
+  margin: 0px;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+}
+.item-menu li:hover {
+  background: #f0f0f0;
+}

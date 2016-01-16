@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timothy Castillo - Employee Directory</title>
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Righteous:400,700|Lato:400,700,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+</head>
+<body ng-app="listrEnterpriseApp">
+
+  <header>
+    <h1>Listr 2.0</h1>
+    <h2>Enterprise Ed.</h2>
+  </header>
+
+  <main ng-controller="directoryController">
+
+    <section>
+
+      <form ng-submit="newPersona()">
+
+        <h3>New Employee</h3>
+
+        <label for="First Name">Employee Name</label>
+        <input type="text" name="First Name" ng-model="newPersonaItem.firstName" placeholder="John" required>
+        <input type="text" name="Middle Initial" ng-model="newPersonaItem.middleInitial" placeholder="A.">
+        <input type="text" name="Last Name" ng-model="newPersonaItem.lastName" placeholder="Doe" required>
+
+        <label for="Position">Position</label>
+        <input type="text" name="Position" ng-model="newPersonaItem.position" required>
+
+        <label for="Address">Address</label>
+        <input type="text" name="Address" ng-model="newPersonaItem.address">
+
+        <label for="Address Line 2">Address Line 2</label>
+        <input type="text" name="Address Line 2" ng-model="newPersonaItem.addressLine2">
+
+        <div class="city-input-holder">
+          <label for="City">City</label>
+          <input type="text" name="City" ng-model="newPersonaItem.city">
+        </div>
+
+        <div class="state-input-holder">
+          <label for="State">State</label>
+          <input type="text" name="State" ng-model="newPersonaItem.state">
+        </div>
+
+        <div class="zipcode-input-holder">
+          <label for="Zipcode">Zipcode</label>
+          <input type="text" name="Zipcode" ng-model="newPersonaItem.zipcode">
+        </div>
+
+        <label for="Email">Email</label>
+        <input type="email" name="Email" ng-model="newPersonaItem.email" required>
+
+        <div class="phone-input-holder">
+          <label for="Phone Number">Phone Number</label>
+          <input type="tel" name="Phone Number" ng-model="newPersonaItem.phoneNumber">
+        </div>
+
+        <div class="ext-input-holder">
+          <label for="Phone Ext">Phone Ext</label>
+          <input type="text" name="Phone Ext" ng-model="newPersonaItem.phoneExt">
+        </div>
+
+        <div class="birthdate-input-holder">
+          <label for="Birthdate">Birthdate</label>
+          <input type="date" name="Birthdate" ng-model="newPersonaItem.birthdate">
+        </div>
+
+        <button type="submit">+ Add</button>
+
+
+      </form>
+
+    </section>
+
+    <aside>
+
+      <article ng-repeat="persona in personaList track by $index">
+
+        <h4>{{persona.firstName}}<span ng-if="persona.middleInitial">&nbsp;{{persona.middleInitial}}.</span>&nbsp;{{persona.lastName}}</h4>
+        <button ng-click="itemMenu = true" ng-hide="itemMenu === true"><div>.</div><div>.</div><div>.</div></button>
+        <button ng-click="itemMenu = false" ng-show="itemMenu === true"><div>.</div><div>.</div><div>.</div></button>
+        <ul class="item-menu" ng-show="itemMenu === true">
+          <li ng-click="itemMenu = false; deleteItem($index)">Delete</li>
+        </ul>
+        <p class="position">{{persona.position}}</p>
+        <p class="address">{{persona.address}}</p>
+        <p class="addressLine2" ng-if="persona.addressLine2">{{persona.addressLine2}}</p>
+        <p class="city">{{persona.city}}</p>
+        <p class="state">{{persona.state}}</p>
+        <p class="zipcode">{{persona.zipcode}}</p>
+        <p class="email">{{persona.email}}</p>
+        <p class="phoneNumber">{{persona.phoneNumber}}</p>
+        <p class="phoneExt" ng-if="persona.phoneExt">Ext. {{persona.phoneExt}}</p>
+        <p class="birthdate">{{persona.birthdate | date:MM/dd/yyyy}}</p>
+
+      </article>
+
+    </aside>
+
+  </main>
+
+</body>
+</html>
