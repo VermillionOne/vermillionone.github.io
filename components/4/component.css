@@ -1,490 +1,150 @@
-body {
-  background: #000;
-  font-family: sans-serif;
+-/* Component Stylesheet
+============================================================
+============================================================*/
+
+
+/* Nav Classes
+=============================*/
+
+nav {
+  font-family: 'PT Sans', sans-serif;
+  width: 1080px;
+  position: relative;
+  margin: 100px auto;
   color: #fff;
-  margin: 0px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
-.container {
-  padding: 0px;
-  margin: 0px;
-}
-header {
-  position: relative;
-  overflow: auto;
-  padding: 10px 20px;
-  margin: 0px;
-  box-shadow: inset ;
-  background: rgba(56,56,56,1);
-  background: -moz-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(59,59,59,1) 86%, rgba(48,48,48,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,56,56,1)), color-stop(86%, rgba(59,59,59,1)), color-stop(100%, rgba(48,48,48,1)));
-  background: -webkit-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(59,59,59,1) 86%, rgba(48,48,48,1) 100%);
-  background: -o-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(59,59,59,1) 86%, rgba(48,48,48,1) 100%);
-  background: -ms-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(59,59,59,1) 86%, rgba(48,48,48,1) 100%);
-  background: linear-gradient(to bottom, rgba(56,56,56,1) 0%, rgba(59,59,59,1) 86%, rgba(48,48,48,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#303030', GradientType=0 );
-}
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: 200;
-}
-h1 {
-  margin: 0px;
-  padding: 0px;
-  font-weight: 200;
-  position: relative;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
-}
-h2 {
-  padding: 0px 20px;
-}
-.iframe-holder {
-  width: 80%;
-  margin: 20px auto;
-  padding: 10px auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 2px;
-}
-iframe {
-  width: 100%;
-}
-table, p, label, button, figure {
-  float: left;
-  clear: both;
-  margin: 2%;
-}
-form {
-  width: 85%;
-  position: relative;
-  overflow: auto;
-  background: #5e5e5e;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px auto;
-}
-label{
-  font-weight: 700;
-  font-size: 18px;
-}
-input {
-  background: #e5e5e5;
-  padding: 5px 5px;
-  font-size: .875em;
-  width: 96%;
-  color: #1e1e1e;
-  border: 2px solid #f0f0f0f0;
-  border-radius: 4px;
-}
-.cta {
-  width: 100%;
-  padding: 4% 0%;
-  position: relative;
-  border: 2px solid #d2ff52;
-  font-size: 1em;
-  font-weight: 700;
-  color: #ffffff;
-  cursor: pointer;
-  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
-  box-shadow: 0px 2px 1px 0px rgba(0,0,0,.25), inset 0px -1px 1px rgba(0,0,0,.9);
-  margin: 3% auto;
-  border-radius: 4px;
-  border: 0px solid;
-  background: rgba(150,204,0,1);
-  background: -moz-linear-gradient(top, rgba(150,204,0,1) 0%, rgba(87,159,20,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(150,204,0,1)), color-stop(100%, rgba(87,159,20,1)));
-  background: -webkit-linear-gradient(top, rgba(150,204,0,1) 0%, rgba(87,159,20,1) 100%);
-  background: -o-linear-gradient(top, rgba(150,204,0,1) 0%, rgba(87,159,20,1) 100%);
-  background: -ms-linear-gradient(top, rgba(150,204,0,1) 0%, rgba(87,159,20,1) 100%);
-  background: linear-gradient(to bottom, rgba(150,204,0,1) 0%, rgba(87,159,20,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96cc00', endColorstr='#579f14', GradientType=0 );
-}
-.cta:active {
-  box-shadow: inset 0px 0px 10px rgba(0,0,0,.5);
-}
-p {
-  padding: 0px 20px;
-}
-table {
-  width: 85%;
-  color: #3f3f3f;
-  margin: 0px 7.5%;
-  border-radius: 4px;
-  border-collapse: collapse;
-  background-color: #d0d0d0;
-  overflow: hidden;
-}
-th, td {
-  width: 33%;
-  margin: 0px;
-  padding: 5px;
-}
-th {
-  border-bottom: 2px solid #a0a0a0;
-  padding: 10px 0px;
-  background: #3f3f3f;
-  color: #fafafa;
-  text-shadow: 0px -2px 0px rgba(0,0,0,.25);
-}
-th:nth-child(2), td:nth-child(2) {
-  border-right: 2px solid #c0c0c0;
-  border-left: 2px solid #c0c0c0;
-}
-tr:nth-last-child(1n+2) {
-  border-bottom: 2px solid #b0b0b0;
-}
-.gallery {
-  width: 85%;
-  margin: 0px auto;
-}
-figure {
-  width: 90%;
-  margin: 10px auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-  background: #3c3c3c;
-  box-shadow: inset 0px -2px 2px rgba(0,0,0,.5), inset 0px 2px 2px rgba(255,255,255,.25);
-  padding: 5%;
-}
-figure img {
-  width: 100%;
-  height: initial;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 5px rgba(0,0,0,.25);
-}
-figcaption {
-  padding: 2%;
-  font-size: .75em
-}
-figcaption a{
-  text-decoration: none;
-  color: #d2ff53;
-}
-.dropdown-button {
-  position: absolute;
-  background: #3c3c3c;
-  top: 10px;
-  right: 5%;
-  padding: 9px;
-  box-sizing: border-box;
-  width: 50px;
-  height: 45px;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0px 2px 2px rgba(0,0,0,1), inset 0px 1px 2px rgba(255,255,255,.5), inset 0px -2px 2px rgba(0,0,0,.5);
-}
-.dropdown-button .bar {
-  height: 4px;
-  background: #00ff09;
-  border-radius: 10px;
-  margin: 0px auto 6px;
-  width: 80%;
-  box-shadow: inset 0px 2px 3px rgba(0,0,0,1);
-}
-.dropdown-button:hover {
-  box-shadow: inset 0px 0px 10px rgba(0,0,0,1);
-}
-.dropdown-button:hover .bar {
-  height: 4px;
-  background: #00ff09;
-  border-radius: 10px;
-  margin: 0px auto 6px;
-  width: 80%;
-  box-shadow: inset 0px 2px 3px rgba(0,0,0,.8);
-}
-aside{
-  position: absolute;
-  top: 0px;
-  right: 0%;
-  width: 100%;
-}
-aside ul {
-  top: 0%;
-  right: 5%;
-  height: 0px;
-  width: 90%;
-  visibility: hidden;
-  margin: 41px 0px;
-  overflow: hidden;
-  padding: 10px 0px;
-  position: absolute;
-  border-radius: 5px;
-  background: #3c3c3c;
+nav > ul {
   list-style-type: none;
-  box-sizing: border-box;
-  box-shadow: inset 0px 1px 2px rgba(255,255,255,.5), inset 0px -2px 2px rgba(0,0,0,.5);
-  -webkit-transition: all 1s, -webkit-transform 1s;
-  transition: all 1s, transform 1s;
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-aside:hover ul {
-  top: 10px;
-  left: 5%;
-  height: 12.5em;  220px / 16px = 13.75em
-  width: 90%;
-  padding: 10px;
-  display: block;
-  overflow: visible;
-  visibility: visible;
-  position: absolute;
-  background: #3c3c3c;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-aside ul li {
-  display: block;
-  position: relative;
-  float: left;
-  clear: both;
-  margin: 5px 0px;
   width: 100%;
+  overflow: vis;
 }
-aside ul li a {
-  text-decoration: none;
-  color: #e0e0e0;
-  width: 92%;
-  display: block;
-  padding: 15px;
-  text-shadow: 0px -2px 0px rgba(0,0,0,.25);
-  border-radius: 3px;
-  box-shadow: 0px 2px 1px 0px rgba(0,0,0,.25), inset 0px -1px 1px rgba(0,0,0,.9);
-  background: rgba(56,56,56,1);
-  background: -moz-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,56,56,1)), color-stop(100%, rgba(48,48,48,1)));
-  background: -webkit-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-  background: -o-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-  background: -ms-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-  background: linear-gradient(to bottom, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#303030', GradientType=0 );
+nav > ul > li {
+  width: 16%;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  border-right: 1px #817c79 solid;
+  background-color: #5e5652;
 }
-aside ul li a:active {
-  box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+nav > ul > li:hover{
+  background-color: #fff;
+  color: #5e5652;
+  box-shadow: 0 -3px 23px 1px rgba(0,0,0,0.1);
+  border-right: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
+
 }
-footer {
-  height: 200px;
+nav > ul > li:nth-child(5) {
+  width: 20%;
+}
+ul li {
+  display: inline-block;
   float: left;
-  clear: both;
-  background: #333;
-  box-shadow: 0px 2px 2px rgba(0,0,0,1);
 }
-@media (min-width: 500px) {
-  header{
-    padding: 40px;
-  }
-  .dropdown-button {
-    visibility: hidden;
-  }
-  aside ul {
-    top: 0%;
-    right: 5%;
-    left: 5px;
-    width: 60%;
-    float: right;
-    height: 100px;
-    margin: 10px 10px;
-    padding: 10px 0px;
-    position: relative;
-    border-radius: 5px;
-    visibility: visible;
-    background: rgba(0,0,0,0);
-    list-style-type: none;
-    box-sizing: border-box;
-    box-shadow: none;
-    -webkit-transition: all 1s, -webkit-transform 1s;
-    transition: all 1s, transform 1s;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  aside:hover ul {
-    top: 0%;
-    right: 5%;
-    left: 5px;
-    width: 60%;
-    float: right;
-    height: 90px;
-    visibility: visible;
-    overflow: auto;
-    margin: 10px 10px;
-    padding: 10px 0px;
-    position: relative;
-    border-radius: 5px;
-    background: rgba(0,0,0,0);
-    list-style-type: none;
-    box-sizing: border-box;
-    box-shadow: none;
-  }
-  aside ul li {
-    display: block;
-    position: relative;
-    float: left;
-    clear: none;
-    width: 30%;
-  }
-  aside ul li a {
-    text-decoration: none;
-    color: #e0e0e0;
-    width: 70%;
-    display: block;
-    padding: 15px;
-    text-shadow: 0px -2px 0px rgba(0,0,0,.25);
-    border-radius: 3px;
-    box-shadow: 0px 2px 1px 0px rgba(0,0,0,.25), inset 0px -1px 1px rgba(0,0,0,.9);
-    background: rgba(56,56,56,1);
-    background: -moz-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,56,56,1)), color-stop(100%, rgba(48,48,48,1)));
-    background: -webkit-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: -o-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: -ms-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: linear-gradient(to bottom, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#303030', GradientType=0 );
-  }
-  iframe {
-    height: 400px;
-  }
-  figure {
-    width: 35%;
-    display: inline-block;
-    margin: 10px;
-    clear: right;
-    float: left;
-    padding: 10px;
-    height: 200px;
-  }
-  figcaption {
-    font-size: .7em;
-  }
+ul li a {
+  cursor: pointer;
 }
-@media (min-width: 700px) {
-  body {
-    margin: 40px auto;
-    position: relative;
-  }
-  .container {
-    border-radius: 0px 80px;
-    overflow: hidden;
-    margin: 0px auto;
-    border-right: 2px solid #d2ff53;
-    border-top: 2px solid #d2ff53;
-  }
-  header {
-    background: rgba(0,0,0,1);
-    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
-    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
-    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0000000', GradientType=0 );
-  }
-  .main-content,
-  .gallery {
-    float: right;
-    width: 70%;
-  }
-  .gallery {
-    padding: 0px 40px 0px 0px;
-    box-sizing: border-box;
-  }
-  figure {
-    float: right;
-    width: 41%;
-    clear: left;
-  }
-  aside{
-    position: relative;
-    overflow: auto;
-    width: 29%;
-    height: 2900px;
-    border-radius: 0px 40px 0px 0px;
-    border-right: 2px solid #d2ff53;
-    border-top: 2px solid #d2ff53;
-  }
-  aside ul {
-    left: 0px;
-    width: 90%;
-    float: left;
-    overflow: visible;
-    visibility: visible;
-    margin: 10px 10px;
-    padding: 10px 0px;
-    position: relative;
-    border-radius: 5px;
-    background: rgba(0,0,0,0);
-    list-style-type: none;
-    box-sizing: border-box;
-    box-shadow: none;
-    -webkit-transition: all 1s, -webkit-transform 1s;
-    transition: all 1s, transform 1s;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  aside:hover ul {
-    left: 0px;
-    width: 90%;
-    float: left;
-    overflow: visible;
-    margin: 10px 10px;
-    padding: 10px 0px;
-    position: relative;
-    border-radius: 5px;
-    background: rgba(0,0,0,0);
-    list-style-type: none;
-    box-sizing: border-box;
-    box-shadow: none;
-  }
-  aside ul li {
-    display: block;
-    position: relative;
-    float: left;
-    clear: both;
-    margin: 20px 0px;
-    width: 100%;
-  }
-  aside ul li a {
-    text-decoration: none;
-    color: #e0e0e0;
-    width: 70%;
-    display: block;
-    padding: 15px;
-    text-shadow: 0px -2px 0px rgba(0,0,0,.25);
-    border-radius: 3px;
-    box-shadow: 0px 2px 1px 0px rgba(0,0,0,.25), inset 0px -1px 1px rgba(0,0,0,.9);
-    background: rgba(56,56,56,1);
-    background: -moz-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,56,56,1)), color-stop(100%, rgba(48,48,48,1)));
-    background: -webkit-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: -o-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: -ms-linear-gradient(top, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    background: linear-gradient(to bottom, rgba(56,56,56,1) 0%, rgba(48,48,48,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#303030', GradientType=0 );
-  }
-  footer {
-    width: 71%;
-    float: right;
-    border-left: 2px solid #d2ff53;
-    border-bottom: 2px solid #d2ff53;
-    box-sizing: border-box;
-  }
+
+/* Sub-Nav Classes
+=============================*/
+
+nav > ul > li:first-child {
+  background-color: #fff;
+  color: #5e5652;
+  box-shadow: 0 -3px 23px 1px rgba(0,0,0,0.1);
+  border-right: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
+  padding-bottom: 0px;
 }
-@media (min-width: 950px) {
-  .container {
-    max-width: 960px;
-    position: relative;
-  }
-  aside ul {
-    visibility: visible;
-    width: 90%;
-  }
-  aside:hover ul {
-    visibility: visible;
-    width: 90%;
-  }
-  header {
-    border-left: 2px solid #d2ff53;
-  }
-  footer {
-    border-bottom: 2px solid #d2ff53;
-  }
+nav > ul > li:first-child:before {
+  background: url(img/best-sellers-badge.png) left top no-repeat;
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  border: 0;
+  height: 25px;
+  width: 25px;
+}
+nav > ul > li:first-child ul {
+  background-color: #fff;
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin: 10px -10px 0px;
+  overflow: auto;
+  padding: 0 0 0 39px;
+  width: 1079px;
+}
+nav > ul > li:first-child ul li {
+  width: 137px;
+
+  overflow: hidden;
+  padding: 14px 20px 17px 19px;
+}
+nav > ul > li:first-child ul li a{
+  font-size: 0.875em;
+  padding-left: 30px;
+  line-height: 14px;
+  text-align: left;
+  position: relative;
+  color: #5e5652;
+  display: inline-block;
+}
+/* Sprite Classes
+=============================*/
+.icon {
+  background-image: url('img/sprite.svg');
+  background-size: 157px 1000px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  clear: none;
+  display: block;
+  font-size: 19px;
+  height: 25px;
+  line-height: 14px;
+  left: 0;
+  margin: 2px 3px 10px;
+  padding: 0;
+  position: absolute;
+  width: 25px;
+}
+.icon-wordpress {
+  background-color: #464646;
+  background-position: -67px -98px;
+  border-color: #464646;
+}
+.icon-websites {
+  background-color: #fc3026;
+  background-position: -67px -942px;
+  border-color: #fc3026;
+}
+.icon-joomla {
+  background-color: #fc8c2c;
+  background-position: -4px -973px;
+  border-color: #fc8c2c;
+}
+.icon-prestaShop {
+  background-color: #9fdae7;
+  background-position: -35px -160px;
+  border-color: #9fdae7;
+}
+.icon-magento {
+  background-color: #ef5829;
+  background-position: -67px -973px;
+  border-color: #ef5829;
+}
+.icon-openCart {
+  background-color: #31c7f3;
+  background-position: -4px -192px;
+  border-color: #31c7f3;
+}
+.icon-moto-cms {
+  background-color: #f27321;
+  background-position: -35px -879px;
+  border-color: #f27321;
 }
