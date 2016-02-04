@@ -218,11 +218,11 @@ app
          */
         this.removeData = function (arrayName, deletedIndex) {
             if (arrayName === 'groceries') {
-                savedData.groceries.splice(savedData.groceries.indexOf(deletedIndex), 1);
+                savedData.groceries.splice(deletedIndex, 1);
             } else if (arrayName === 'toDos') {
-                savedData.toDos.splice(savedData.groceries.indexOf(deletedIndex), 1);
+                savedData.toDos.splice(deletedIndex, 1);
             } else if (arrayName === 'contacts') {
-                savedData.contacts.splice(savedData.groceries.indexOf(deletedIndex), 1);
+                savedData.contacts.splice(deletedIndex, 1);
             }
 
             var str = JSON.stringify(savedData);

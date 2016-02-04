@@ -12,7 +12,7 @@
     <li ng-repeat="item in groceries track by $index">
       {{ item }} {{$index}}
 
-      <button ng-click="deleteItem(item)">Delete</button>
+      <button ng-click="deleteItem($index)">Delete</button>
 
     </li>
   </ul>
