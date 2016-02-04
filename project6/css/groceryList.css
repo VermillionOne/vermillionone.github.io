@@ -1,0 +1,55 @@
+.groceryList h1 {
+  background-color: #039BE5;
+  box-shadow: 0 0px 5px rgba(0,0,0,.5);
+  color: #fff;
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 25px 10px;
+  width: 100%;
+  word-spacing: 5px;
+  text-shadow: 0 -2px 0 rgba(0,0,0,.25);
+}
+
+.groceryList section, .groceryList h2 {
+  max-width: 960px;
+  width: 100%;
+  margin: 8px auto;
+}
+.groceryList h2, .groceryList form, .groceryList ul {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+}
+.groceryList h2 {
+  font-size: 2em;
+  margin: 16px auto 8px;
+  padding: 25px 0;
+  text-indent: 25px;
+  border-radius: 3px;
+}
+.groceryList ul {
+  margin: 8px auto;
+  list-style-type: none;
+  padding: 25px;
+}
+.groceryList ul li {
+  border-bottom: 1px solid #d9d5d0;
+  font-size: 1.25em;
+  padding: 5px 10px;
+}
+.groceryList ul li:nth-child(1) {
+  border-top: 1px solid #d9d5d0;
+}
+.groceryList ul li:nth-child(odd) {
+  background: #fff5f0;
+}
+.groceryList ul li button {
+  background: #fff;
+  border: 0px solid;
+  border-radius: 3px;
+  text-transform: capitalize;
+  float: right;
+  font-size: .75em;
+}

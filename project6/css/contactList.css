@@ -1,0 +1,114 @@
+.contacts-holder {
+  background: #fff;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+}
+.contacts-holder article {
+  width: 100%;
+  position: relative;
+  max-width: 300px;
+  float: left;
+  margin: 10px calc(0.6%) 0;
+  box-shadow: 0 1px 5px rgba(0,0,0,.25);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.contacts-holder p {
+  float: left;
+  margin: 5px 5px 0 0;
+}.contactList article {
+  width: 100%;
+  position: relative;
+  max-width: 300px;
+  float: left;
+  margin: 10px calc(0.6%) 0;
+  box-shadow: 0 1px 5px rgba(0,0,0,.25);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.contactList p {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+.contactList label{
+  width: 50%;
+  float: left;
+  display: block;
+  min-width: 320px;
+  position: relative;
+  height: 75px;
+}
+.contactList input {
+  width: 90%;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  min-width: 320px;
+}
+
+.name {
+  font-weight: 700; 
+}
+p.delete-contact {
+  padding: 0px 7px;
+  text-align: center;
+  position: absolute;
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 1.5em;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+  top: -3px;
+  right: -2px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+.delete-contact:hover {
+  background: #ff5d5d;
+}
+
+.address {
+  width: 100%;
+}
+.city {
+  width: 40%;
+}
+.state {
+  width: 15%;
+}
+.zipcode {
+  text-align: right;
+  float: right;
+  width: 30%;
+}
+.phoneNumber {
+  width: 100%;
+  text-align: left;
+}
+.item-menu {
+  list-style-type: none;
+  background: #fafafa;
+  box-shadow: 0 1px 2px rgba(0,0,0,.25);
+  width: 25%;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  padding: 0;
+}
+.item-menu li {
+  cursor: pointer;
+  margin: 0px;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+}
+.item-menu li:hover {
+  background: #f0f0f0;
+}

@@ -1,122 +1,252 @@
 
 /*jslint */
-/*global app,angular,localStorage,document*/
+/*global app,angular,console,localStorage,document*/
 
-var app = angular.module("listrEnterpriseApp", []);
+var app = angular.module("listrOmniApp", ['ngRoute']);
 
 app
-    .controller('directoryController', function ($scope, $timeout) {
+    .config(function ($routeProvider) {
+        'use strict';
 
-        'Use Strict';
+        /**
+         * Define routes for each view controller
+         */
+        $routeProvider
+            .when('/groceryList', {
+                templateUrl: 'groceryList.html',
+                controller: 'groceryListController'
+            })
+            .when('/toDoList', {
+                templateUrl: 'toDoList.html',
+                controller: 'toDoListController'
+            })
+            .when('/contactList', {
+                templateUrl: 'contactList.html',
+                controller: 'contactListController'
+            })
+            .otherwise({
+                redirectTo: "/groceryList"
+            });
 
+    })
+
+    .controller('groceryListController', function ($scope, $timeout, DataService, $routeParams) {
+        'use strict';
         angular.element(document).ready(function () {
+            var pageData, savedData;
 
-            /**
-             * Set variables
-             */
-            var personaList;
+            savedData = DataService.getData('savedData');
+
+            pageData = savedData.groceries;
 
             $timeout(function () {
-
-                $scope.personaList = JSON.parse(localStorage.getItem('personaList'));
-                if ($scope.personaList === null) {
-                    $scope.personaList = [
-                        {
-                            "birthdate":"1988-06-06T07:00:00.000Z",
-                            "firstName":"Timothy",
-                            "middleInitial":"J",
-                            "lastName":"Castillo",
-                            "position":"Front End Developer",
-                            "address":"6544 Strolling Plains Lane",
-                            "city":"Henderson",
-                            "addressLine2":"Unit 103",
-                            "state":"NV",
-                            "zipcode":"89011",
-                            "email":"tjc0609@gmail.com",
-                            "phoneNumber":"17028828663"
-                        }
-                    ]
-                }
-
+                $scope.groceries = pageData;
             });
 
             /**
-             * [getData description]
-             * @return {object} [description]
+             * Updates the appropriate section of the local storage data
              */
-            $scope.getData = function () {
+            $scope.addNewListItem = function (newItem) {
+                pageData.push(newItem);
 
-                var listData;
+                savedData.groceries = pageData;
 
-                // Get data from HTML5 storage
-                listData = localStorage.getItem('personaList');
+                DataService.addData(savedData);
 
-                // Parse data into object
-                listData = JSON.parse(listData);
+                savedData = DataService.getData('savedData');
 
-                // Return data
-                return listData;
+              $timeout(function () {
+                    $scope.groceries = savedData.groceries;
+                });
             };
 
-            $scope.personaList = $scope.getData();
-
-            console.log($scope.personaList);
-
-            /**
-             * [newPersona description]
-             * @return {[type]} [description]
-             */
-            $scope.newPersona = function () {
-
-                console.log($scope.newPersonaItem);
-
-                var newPersonaItem;
-                $scope.personaList = $scope.getData();
-
-                personaList = $scope.personaList;
-
-                if (personaList === null) {
-                    personaList = [];
-                }
-
-                newPersonaItem = $scope.newPersonaItem;
-                if (personaList.indexOf(newPersonaItem) === -1 && newPersonaItem !== undefined && newPersonaItem !== '') {
-
-                    personaList.push(newPersonaItem);
-                    console.log(personaList);
-                    $scope.newPersonaItem = '';
-
-                     // Stringify object
-                    personaList = JSON.stringify(personaList);
-
-                    // Save to HTML5 storage
-                    localStorage.setItem('personaList', personaList);
-
-                } else if (personaList.indexOf(newPersonaItem) > -1 && newPersonaItem !== undefined && newPersonaItem !== '') {
-                    $scope.newPersonaItem = '';
-                }
-
-            };
-
-            $scope.deleteItem = function (item) {
-                var deletedItemIndex;
-
-                deletedItemIndex = item;
-
-                personaList = $scope.personaList;
-
-                personaList.splice(deletedItemIndex, 1);
-
-                $scope.personaList = personaList;
-
-                 // Stringify object
-                personaList = JSON.stringify(personaList);
-
-                // Save to HTML5 storage
-                localStorage.setItem('personaList', personaList);
-
+            $scope.deleteItem = function (itemIndex) {
+                DataService.removeData('groceries', itemIndex);
+                savedData = DataService.getData('savedData');
+				pageData = savedData.groceries;
+                $timeout(function () {
+                    $scope.groceries = savedData.groceries;
+                });
             };
 
         });
+
+    })
+
+    .controller('toDoListController', function ($scope, DataService, $timeout, $routeParams) {
+        'use strict';
+
+        angular.element(document).ready(function () {
+            var pageData, savedData;
+
+            savedData = DataService.getData('savedData');
+
+            pageData = savedData.toDos;
+
+            $timeout(function () {
+                $scope.toDos = pageData;
+            });
+
+            /**
+             * Updates the appropriate section of the local storage data
+             */
+            $scope.addNewListItem = function (newItem) {
+                pageData.push(newItem);
+
+                savedData.toDos = pageData;
+
+                DataService.addData(savedData);
+
+                savedData = DataService.getData('savedData');
+              $timeout(function () {
+                    $scope.toDos = savedData.toDos;
+                });
+            };
+
+            $scope.deleteItem = function (itemIndex) {
+                DataService.removeData('toDos', itemIndex);
+                savedData = DataService.getData('savedData');
+				pageData = savedData.toDos;
+                $timeout(function () {
+                    $scope.toDos = savedData.toDos;
+                });
+            };
+
+        });
+    })
+
+    .controller('contactListController', function ($scope, $timeout, DataService, $routeParams) {
+        'use strict';
+
+        angular.element(document).ready(function () {
+            var pageData, savedData;
+
+            savedData = DataService.getData('savedData');
+
+            pageData = savedData.contacts;
+
+            $timeout(function () {
+                $scope.contacts = pageData;
+            });
+
+            /**
+             * Updates the appropriate section of the local storage data
+             */
+            $scope.addNewListItem = function (newItem) {
+                pageData.push(newItem);
+
+                savedData.contacts = pageData;
+
+                DataService.addData(savedData);
+
+                savedData = DataService.getData('savedData');
+              $timeout(function () {
+                    $scope.contacts = savedData.contacts;
+                });
+            };
+
+            $scope.deleteItem = function (itemIndex) {
+                DataService.removeData('contacts', itemIndex);
+                savedData = DataService.getData('savedData');
+				pageData = savedData.contacts;
+                $timeout(function () {
+                    $scope.contacts = savedData.contacts;
+                });
+            };
+
+        });
+
+    })
+
+    .service('DataService', function () {
+        'use strict';
+
+        var savedData;
+
+        savedData = {
+            groceries: ['eggs', 'bread', 'milk', 'cheese'],
+            toDos: [
+                {
+                    "title": "Create and Delete",
+                    "dueDate": "2016-01-22T08:00:00.000Z",
+                    "description": "Create a form that create and delete things"
+                }
+
+            ],
+            contacts: [
+                {
+                    "name": "Timothy Castillo",
+                    "address": "6544 Strolling Plains Lane",
+                    "city": "Henderson",
+                    "state": "NV",
+                    "zipcode": "89011",
+                    "email": "tjc0609@gmail.com",
+                    "phoneNumber": "17028828663"
+                }
+            ]
+        };
+
+        /**
+         * Retrieving local storage data to update page data
+         * @return {JSON} savedData = Parsed version of local storage
+         */
+        this.getData = function () {
+            var str = localStorage.getItem('savedData');
+            savedData = JSON.parse(str) || savedData;
+            return savedData;
+        };
+
+        /**
+         * Adding new data to local storage
+         * @param {string} arrayName = Category of data being stored (Options are 'groceries', 'toDos', and 'contacts')
+         * @param {object} newData = JSON data to add to storage
+         */
+        this.addData = function (newData) {
+
+            var savedData, str;
+
+            savedData = newData;
+
+            str = JSON.stringify(savedData);
+            localStorage.setItem('savedData', str);
+        };
+
+        /**
+         * Removing data from object in local storage
+         * @param  {string} arrayName = Category of data to delete from (Options are 'groceries', 'toDos', and 'contacts')
+         * @param  {[type]} deletedIndex = index to be deleted
+         */
+        this.removeData = function (arrayName, deletedIndex) {
+            if (arrayName === 'groceries') {
+                savedData.groceries.splice(savedData.groceries.indexOf(deletedIndex), 1);
+            } else if (arrayName === 'toDos') {
+                savedData.toDos.splice(savedData.groceries.indexOf(deletedIndex), 1);
+            } else if (arrayName === 'contacts') {
+                savedData.contacts.splice(savedData.groceries.indexOf(deletedIndex), 1);
+            }
+
+            var str = JSON.stringify(savedData);
+            localStorage.setItem('savedData', str);
+        };
+
+    })
+
+    .controller('listrOmniController', function ($scope, $location, $timeout) {
+        'use strict';
+
+        $scope.test = 'Hello, App Controller';
+        angular.element(document).ready(function () {
+            var location = $location;
+          $scope.tabName = location.$$path;
+        });
+
+        /**
+         * Function for highlighting active tab
+         * @param  {string} tabName = string defining tab
+         * @return {none}
+         */
+        $scope.tab = function (tabName) {
+            $scope.tabName = tabName;
+        };
 
     });

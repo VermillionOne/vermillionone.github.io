@@ -1,0 +1,70 @@
+<div class="container contactList" ng-controller="contactListController">
+
+  <form ng-submit="addNewListItem(newContactItem)">
+
+    <label for="First Name">Name
+      <input type="text" name="First Name" ng-model="newContactItem.name" placeholder="John Doe" required>
+    </label>
+
+    <label for="Address">Address
+      <input type="text" name="Address" ng-model="newContactItem.address">
+    </label>
+
+    <label for="Address Line 2">Apartment/Suite #
+      <input type="text" name="Address Line 2" ng-model="newContactItem.addressLine2">
+    </label>
+
+    <div class="city-input-holder">
+      <label for="City">City
+        <input type="text" name="City" ng-model="newContactItem.city">
+      </label>
+    </div>
+
+    <div class="state-input-holder">
+      <label for="State">State
+        <input type="text" name="State" ng-model="newContactItem.state">
+      </label>
+    </div>
+
+    <div class="zipcode-input-holder">
+      <label for="Zipcode">Zipcode
+        <input type="text" name="Zipcode" ng-model="newContactItem.zipcode">
+      </label>
+    </div>
+
+    <label for="Email">Email
+      <input type="email" name="Email" ng-model="newContactItem.email" required>
+    </label>
+
+    <div class="phone-input-holder">
+      <label for="Phone Number">Phone Number
+        <input type="tel" name="Phone Number" ng-model="newContactItem.phoneNumber">
+      </label>
+    </div>
+    <div class="button-spacer">
+      <button type="submit">+ Add</button>
+    </div>
+
+  </form>
+
+  <div class="contacts-holder">
+  
+    <article ng-repeat="contact in contacts track by $index">
+
+      <p class="name">{{contact.name}}</p>
+
+      <p class="delete-contact" ng-click="deleteItem($index)">+</p>
+      <p class="address">{{contact.address}}</p>
+      <p class="addressLine2" ng-if="Contact.addressLine2">{{contact.addressLine2}}</p>
+      <p class="city">{{contact.city}}</p>
+      <p class="state">{{contact.state}}</p>
+      <p class="zipcode">{{contact.zipcode}}</p>
+      <p class="email">{{contact.email}}</p>
+      <p class="phoneNumber">{{contact.phoneNumber}}</p>
+      <p class="phoneExt" ng-if="Contact.phoneExt">Ext. {{contact.phoneExt}}</p>
+
+    </article>
+
+  </div>
+
+</div>

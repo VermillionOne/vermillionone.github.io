@@ -1,0 +1,35 @@
+<div class="container toDoList" ng-controller="toDoListController">
+
+  <form ng-submit="addNewListItem(newToDo)">
+
+    <label for="item-title">Title</label>
+    <input type="text" class="item-title" required ng-model="newToDo.title" name="item-title">
+
+    <label for="due-date">Due Date</label>
+    <input type="date" class="due-date" ng-model="newToDo.dueDate" name="list-name">
+
+    <label for="item-description">Description</label>
+    <textarea type="text" class="item-description" ng-model="newToDo.description" name="item-description" rows="4"></textarea>
+
+    <div class="button-spacer">
+      <button type="submit">+ Add</button>
+    </div>
+
+  </form>
+
+  <div class="lists-holder">
+
+    <ul class="to-do-list">
+      <li ng-repeat="toDo in toDos track by $index">
+        <h4 class="list-item-title">{{toDo.title}}</h4>
+        <p class="list-item-due-date">{{toDo.dueDate | date:MM/dd/yyyy}}</p>
+        <p class="list-item-description">{{toDo.description}}</p>
+        <div class="item-functions">
+          <p class="delete-item" ng-click="deleteItem($index)">Delete</p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+</div>

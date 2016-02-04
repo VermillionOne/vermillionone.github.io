@@ -1,0 +1,20 @@
+<div class="container groceryList" ng-controller="groceryListController">
+
+  <form ng-submit="addNewListItem(newItem)">
+    <label>New List Item</label>
+    <input type="text" name="newListItem" required ng-model="newItem" placeholder="Add New Item" ng-value="newItem">
+    <div class="button-spacer">
+      <button type="submit">+ Add</button>
+    </div>
+  </form>
+
+  <ul>
+    <li ng-repeat="item in groceries track by $index">
+      {{ item }} {{$index}}
+
+      <button ng-click="deleteItem(item)">Delete</button>
+
+    </li>
+  </ul>
+
+</div>
